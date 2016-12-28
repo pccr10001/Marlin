@@ -1860,7 +1860,7 @@ void Temperature::isr() {
     ZERO(raw_temp_value);
     raw_temp_bed_value = 0;
 
-    int constexpr temp_dir[] = {
+    int  temp_dir[] = {
       #if ENABLED(HEATER_0_USES_MAX6675)
          0
       #elif HEATER_0_RAW_LO_TEMP > HEATER_0_RAW_HI_TEMP

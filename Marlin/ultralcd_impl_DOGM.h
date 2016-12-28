@@ -282,9 +282,9 @@ static void lcd_implementation_init() {
     const uint8_t offx = (u8g.getWidth() - (START_BMPWIDTH)) / 2;
 
     #if ENABLED(START_BMPHIGH)
-      constexpr uint8_t offy = 0;
+       uint8_t offy = 0;
     #else
-      constexpr uint8_t offy = DOG_CHAR_HEIGHT;
+       uint8_t offy = DOG_CHAR_HEIGHT;
     #endif
 
     const uint8_t txt1X = (u8g.getWidth() - (sizeof(STRING_SPLASH_LINE1) - 1) * (DOG_CHAR_WIDTH)) / 2;
@@ -776,7 +776,7 @@ static void lcd_implementation_status_screen() {
         lcd_setFont(FONT_MENU);
       }
     #else
-      constexpr uint8_t lcd_width = LCD_WIDTH - (START_COL),
+       uint8_t lcd_width = LCD_WIDTH - (START_COL),
                         char_width = DOG_CHAR_WIDTH;
     #endif
 

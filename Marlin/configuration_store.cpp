@@ -590,7 +590,7 @@ void Config_ResetDefault() {
   home_offset[X_AXIS] = home_offset[Y_AXIS] = home_offset[Z_AXIS] = 0;
 
   #if HOTENDS > 1
-    constexpr float tmp4[XYZ][HOTENDS] = {
+     float tmp4[XYZ][HOTENDS] = {
       HOTEND_OFFSET_X,
       HOTEND_OFFSET_Y
       #ifdef HOTEND_OFFSET_Z
